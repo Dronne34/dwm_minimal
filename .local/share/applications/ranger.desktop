@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Name=Ranger
+Comment=Launches the ranger file manager
+Icon=folder-saved-search
+Terminal=false
+Exec=st -e ranger %F
+Categories=ConsoleOnly;System;FileTools;FileManager
+MimeType=inode/directory;
+Keywords=File;Manager;Browser;Explorer;Launcher;Vi;Vim;Python
+Path=/home/dell/.local/share/applications
+StartupNotify=false

@@ -1,0 +1,15 @@
+[Added Associations]
+text/markdown=userapp-less-EOUPC2.desktop;
+text/plain=vim.desktop;
+
+[Default Applications]
+inode/directory=ranger.desktop
+image/jpeg=feh.desktop;org.xfce.ristretto.desktop;sxiv.desktop;
+image/jpg=feh.desktop;sxiv.desktop;
+image/png=feh.desktop;sxiv.desktop;
+image/x-bmp=feh.desktop;sxiv.desktop;
+image/x-png=feh.desktop;
+text/markdown=userapp-less-EOUPC2.desktop
+text/plain=vim.desktop
+
+[Removed Associations]

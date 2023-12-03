@@ -1,0 +1,11 @@
+#!/bin/bash
+# . $HOME/.local/bin/dmenu-theming
+RET=$(echo -e "Shutdown\nReboot\nLogout\nCancel\nKill X" | dmenu -p "What do you wanna do?")
+
+case $RET in
+	"Shutdown")  systemctl poweroff ;;
+	"Reboot")    systemctl reboot ;;
+	"Logout")    loginctl  terminate-session $XDG_SESSION_ID ;;
+    "Kill X")    pkill     Xorg || pkill X ;;
+	*) ;;
+esac
