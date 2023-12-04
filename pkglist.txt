@@ -3,6 +3,7 @@ arc-icon-theme
 base
 base-devel
 bash-completion
+bat
 chromium
 expac
 file-roller
@@ -11,6 +12,7 @@ gpick
 grub
 gst-plugin-pipewire
 gvfs
+htop
 intel-media-driver
 libpulse
 libva-intel-driver
@@ -19,12 +21,14 @@ libxft
 libxinerama
 light
 links
+linux
 linux-firmware
 linux-lts
 lsd
 lxappearance
 man-db
 meld
+mesa
 mpc
 nitrogen
 noto-fonts-emoji
@@ -51,6 +55,7 @@ vulkan-intel
 vulkan-radeon
 wget
 wireplumber
+xbindkeys
 xcursor-themes
 xcursor-vanilla-dmz
 xdg-user-dirs
@@ -60,6 +65,8 @@ xf86-video-intel
 xf86-video-nouveau
 xf86-video-vmware
 xorg-server
+xorg-xev
 xorg-xinit
 xorg-xrandr
 yank
+zram-generator
