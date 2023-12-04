@@ -8,7 +8,7 @@ static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int viewonrulestag     = 1;         /* 1 means when open applications view will move to tags defined in rules*/
-static const char *fonts[]          = {"Mononoki Nerd Font:style=Regular:size=10"};
+static const char *fonts[]          = {"Mononoki Nerd Font:style=Regular:size=11"};
 static const char dmenufont[]       = {"FantasqueSansMono Nerd Font:size=11"};
 static const Bool viewontag         = True;     /* Switch view on tag switch */
 /* color */

@@ -1,0 +1,151 @@
+
+# My custom key
+
+# Audio
+
+XF86AudioRaiseVolume
+  pactl set-sink-volume @DEFAULT_SINK@ +10% &&  dunstify  -r 3456 -t 700 \
+  -i audio-volume-high -h string:bgcolor:#2B323A -h string:fgcolor:#FFFFFF -h string:frcolor:#44ff44  \
+  "volume: $(pamixer --get-volume)%" | canberra-gtk-play -i audio-volume-change -d "changeVolume" && pkill -RTMIN+10 dwmblocks
+
+
+XF86AudioLowerVolume
+  pactl set-sink-volume @DEFAULT_SINK@ -10% &&  dunstify  -r 3456 -t 700 \
+  -i audio-volume-medium -h string:bgcolor:#2B323A -h string:fgcolor:#FFFFFF -h string:frcolor:#44ff44  \
+  "volume: $(pamixer --get-volume)%" | canberra-gtk-play -i audio-volume-change -d "changeVolume" && pkill -RTMIN+10 dwmblocks
+
+
+XF86AudioMute
+   pactl set-sink-mute @DEFAULT_SINK@ toggle &&  dunstify  -r 3456 -t 700 \
+   -i audio-volume-muted -h string:bgcolor:#2B323A -h string:fgcolor:#FFFFFF -h string:frcolor:#44ff44  \
+   "mute: $(pamixer --get-mute)" | canberra-gtk-play -i audio-volume-change -d "changeVolume" && pkill -RTMIN+10 dwmblocks
+
+
+XF86AudioMicMute
+   pactl set-source-mute @DEFAULT_SOURCE@ toggle &&  dunstify  -r 3456 -t 700 \
+   -i audio-volume-muted -h string:bgcolor:#2B323A -h string:fgcolor:#FFFFFF -h string:frcolor:#44ff44  \
+   "mute: $(pamixer --get-mute)" | canberra-gtk-play -i audio-volume-change -d "changeVolume" && pkill -RTMIN+10 dwmblocks
+
+# MPC 
+XF86AudioNext
+    mpc --host=localhost --port=6500 next
+    
+
+XF86AudioPrev
+    mpc --host=localhost --port=6500 prev
+
+XF86AudioPlay 
+    mpc --host=localhost --port=6500 toggle  
+
+
+    # Xbacklight
+XF86MonBrightnessUp
+    light -A 10 && backlight
+
+XF86MonBrightnessDown 
+    light -U 10 && backlight
+
+
+# Conky
+ctrl + alt + c
+    killall conky   
+
+
+# sxhkd reload
+ctrl + alt + Escape
+    pkill -USR1 -x sxhkd && dunstify -t 3000 -h string:bgcolor:#2B323A -h string:fgcolor:#ff4444 -h string:frcolor:#44ff44 "Sxhkd Reload!"
+
+
+# Xterm
+ctrl + alt + x 
+   xterm -bw 0 
+
+# picom-trans transparency
+super + alt + bracketleft
+    picom-trans -c -10
+
+super + alt + bracketright
+    picom-trans -c +10
+    
+# system-monitor    
+super + ctrl + m
+    gnome-system-monitor
+
+# Locker   
+super + ctrl + l
+    sh ~/.config/i3/scripts/lock
+    
+      
+# Alacritty
+ctrl + alt + a
+     alacritty
+           
+# Touchpad-togle
+super + ctrl + space
+    sh touchpad_toggle.sh     
+
+# dm Manual 
+ctrl + alt + h
+    sh ~/.local/bin/dm-manual  
+
+# dm Kill Process
+ctrl + alt + k
+    sh ~/.local/bin/dm-kill-process
+
+# dm Open File
+ctrl + alt + l
+    sh ~/.local/bin/dm-live
+
+# dm Web Search  
+ctrl + alt + b   
+
+# dm Places
+ctrl + alt + p 
+
+# dm Mpd
+# ctrl + alt + m    
+     # sh ~/.local/bin/dm-mpd
+
+# dm Run
+ctrl + alt + d  
+     reload_dunst
+
+# dm Power
+ctrl + alt + q  
+     dm-power
+
+# Brave
+shift + super + b  
+     chromium
+
+# xkill
+shift + super + x
+     xkill     
+        
+# Wallpapers
+shift + super + c
+     feh -z --no-fehbg --bg-fill  ~/.config/screen/
+
+# Ranger
+ctrl + alt + r 
+    st -n "ranger" -f "Hack:style=Regular:size=11" -e ranger  
+     
+# Keybind-dwm
+ctrl + alt + o
+     st -n "key" -g "120x40" -f "Hack:style=Regular:size=11" -e bat -l perl ~/.config/keybind/dwm-key
+
+# Htop
+shift + super + m
+     st -n "x_mem" -g "120x40" -f "Hack:style=Regular:size=11" -e htop    
+
+# st-256color
+ctrl + alt + s 
+     st -t "Simple Terminal" -f "Hack:style=Regular:size=11"
+     # st -t "Simple Terminal"
+# xclip mpv
+ctrl + alt + m
+    mpv $(xclip -o) & exit
+
+ctrl + alt + semicolon
+     st -n "key" -g "120x40" -f "Hack:style=Regular:size=11" -e bat -l perl ~/.config/keybind/alias
+

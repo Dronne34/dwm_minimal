@@ -1,6 +1,7 @@
 [Added Associations]
 text/markdown=userapp-less-EOUPC2.desktop;
 text/plain=vim.desktop;
+text/x-chdr=vim.desktop;
 
 [Default Applications]
 inode/directory=ranger.desktop
