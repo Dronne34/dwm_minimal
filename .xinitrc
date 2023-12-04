@@ -43,7 +43,7 @@ exec eval "$(ssh-agent -s)"  &
 exec sxhkd &
 # exec xbindkeys &
 exec dunst &
-exec play_with_mpv &
+# exec play_with_mpv &
 exec dwmblocks & 
-exec ~/.local/bin/relaunch 
+exec relaunch 
 exec dwm
